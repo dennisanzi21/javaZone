@@ -6,6 +6,7 @@ package javazone;
 public class JavaZone {
     public static void main(String[] args) {
         // TODO code application logic here
+        //
     }
     
 }
