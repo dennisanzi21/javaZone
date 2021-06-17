@@ -78,20 +78,20 @@ public class FlexibleQueue <E extends Comparable<E>> implements FlexibleQueueInt
     }
     
     
-    public void  addFirst(E e){  //adds element e to the front of the list
+    public void  addFirst(E e){             //add an element e to the front of the queue
         if (size ==0){
-            tail = new Node<E>(e, null);  //bcz first in nothing so my tail will become null
-            tail.setNext(tail);   //link to itself circularly
+            tail = new Node<E>(e, null);    //if first have nothing, tail become null
+            tail.setNext(tail);             //link to itself circularly
         } else {
             Node<E> newest = new Node<E>(e, tail.getNext());    
-            tail.setNext(newest); //set after tail mean (first item)
+            tail.setNext(newest);           //set after tail mean (first item)
         }
-        size++;  //once add item size increase
+        size++;                             //once add item size increase
     }
     
-    public void addLast(E e){  //adds element e to the end of the list 
-        addFirst(e);    //insert new element at front of list
-        tail= tail.getNext();  //now new element becomes the tail
+    public void addLast(E e){               //add an element e to the end of the list 
+        addFirst(e);                        //insert new element at front of list
+        tail= tail.getNext();               //new element becomes the tail
     }
    
     public E removeFirst(){   //removes and returns the first element
